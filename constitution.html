@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="quickstart,  このサイトについて, QuickStart">
+    <title>ホクシンシステムHPドキュメント・マニュアル | ホクシンシステムHP 開発ドキュメント</title>
+    <link rel="stylesheet" href="css/syntax.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/modern-business.css">
+    <link rel="stylesheet" href="css/lavish-bootstrap.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/customstyles.css">
+    <link rel="stylesheet" href="css/theme-blue.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/jquery.navgoco.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/customscripts.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <link rel="alternate" type="application/rss+xml" title="ec-cube.github.io" href="http://idratherbewriting.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+    </script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <style>
+        .pt50 {
+            padding-top: 50px !important;
+        }
+        
+        .pt10 {
+            padding-top: 10px !important;
+        }
+        
+        .pt20 {
+            padding-top: 20px !important;
+        }
+        
+        .pt100 {
+            padding-top: 100px !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container topnavlinks">
+            <div class="navbar-header">
+                <a class="fa fa-lg navbar-brand" href="hokushin_util_doc.html">&nbsp;<span class="projectTitle"></span>
+                    <img src="images/ホクシンロゴ.png" alt="" height="40vh">
+                </span></a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+
+                <ul id="mysidebar" class="nav">
+                    <li class="sidebarTitle">ホクシンシステムHP</li>
+
+                    <li>
+                        <a href="#">本体の仕様</a>
+                        <ul>
+                            <li><a href="pdf/screen_manual.pdf">画面遷移図</a></li>
+                            <li><a href="constitution.html">サイト構成について</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">各ページ更新の仕方</a>
+                        <ul>
+                            <li><a href="pdf/screen_manual.pdf">説明書</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+            <script>
+                $("li.active").parents('li').toggleClass("active");
+            </script>
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <div class="post-header">
+                    <h1 class="post-title-main">ホクシンシステムHPの構成について</h1>
+                </div>
+
+
+
+                <div class="post-content">
+
+                    <div class="pt50">
+                        <h2>構成</h2>
+                        <ul>
+                            <ul class="pt10">＜PHPファイル＞
+                                <li>header.php → top（IE・iphone以外)用ヘッダー</li>
+                                <li>header-2.php → ナビゲーションバーコンテンツ用ヘッダー</li>
+                                <li>header-3.php → 募集要項用ヘッダー</li>
+                                <li>header-4.php → TOP(IE用)に組み込む用ヘッダー</li>
+                                <li>header-5.php → TOP(iphone用)に組み込む用ヘッダー</li>
+
+                                <li class="pt20">page.php → ナビゲーションバーコンテンツ用ページ</li>
+                                <li>page2.php → TOP（IE）用ページ</li>
+                                <li>page3.php → 募集要項用ページ</li>
+                                <li>page4.php → TOP（iphone）用ページ</li>
+                                <li>page6.php → ポリシー系ページ用ページ</li>
+                                <li>page7.php → スラッグにハイフン入っているナビゲーションバーのコンテンツ用</li>
+
+                                <li class="pt20">footer.php → top（IE）とその他ページ用フッター</li>
+                                <li>footer-2.php → top（IE・iphone以外)用</li>
+                                <li>footer-3.php → top(iphone) 用フッター</li>
+
+                                <li class="pt20">home.php → top（IE・iphone以外)用ページ</li>
+
+                                <li class="pt20">function.php → HPの決まりごとや設定</li>
+
+                                <li class="pt20">archive.php → アーカイブページ（使用していません）</li>
+                                <li>index.php → 補助topページ（使用していません）</li>
+                                <li>sidebar.php → サイドバー作成用（使用していません）</li>
+                                <li>single.php → 個別記事ページ（使用していません）</li>
+
+                            </ul>
+
+                            <ul class="pt20">＜CSS＞
+                                <li>style.css → 全ページ共通CSS</li>
+                                <li>index.css → top(iphone以外)CSS</li>
+                                <li>hokushin_old.css → 前バージョンからの引き継ぎCSS</li>
+                                <li>loading.css → ローディングCSS</li>
+                                <li>recruit.css → top以外のページCSS</li>
+                                <li>safari.css → top(iphone)CSS</li>
+                            </ul>
+
+                            <ul class="pt20">＜JS＞
+                                <li>common.js → 全ページ共通JS</li>
+                                <li>index.js → top（IE・iphone以外)用JS</li>
+                                <li>index2.js → top(iphone)JS</li>
+                                <li>parallax_310.js → 視覚効果用JS</li>
+                                <li>jQuery@3.js → jQuery</li>
+                                <li>jQuery_311.js → jQuery</li>
+                                <li>jQuery_341.js → jQuery</li>
+                                <li>jquery.rwdImageMaps.js → クリッカブルマップ用JS</li>
+                            </ul>
+
+                            <ul class="pt20">＜imagesフォルダ＞
+                                <li>背景として挿入した画像のフォルダ</li>
+                            </ul>
+
+                            <ul class="pt20">＜bootstrapフォルダ＞
+                                <li>bootstrap-4.3.1-distが入っています</li>
+                            </ul>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-12978473-5', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+
+</html>

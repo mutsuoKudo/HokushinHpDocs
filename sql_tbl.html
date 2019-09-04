@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html xmlns:s="http://sqlfairy.sourceforge.net/sqlfairy.xml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta charset="utf-8">
+<title>テーブル定義</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+					table.htable {
+						margin: 3em auto 1em auto !important;
+					}
+					table.htable th {
+						border-left: 10px solid #e5e5e5 !important;
+					}
+					footer {
+						border-top: 1px solid #e5e5e5;
+						padding: 0.5em;
+					}
+				</style>
+</head>
+<body>
+<div class="container">
+<h1 class="page-header">テーブル定義</h1>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>bumon_mei</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>部門のID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>bumon_mei</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>部門の名前</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>display_list</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>char(30)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>ディスプレイリストのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>maker_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイのメーカーID</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>model_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイのモデルID</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td>inch</td>
+<td>decimal(11,1)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイのインチ数</td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td>kaizoudo_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイの解像度ID</td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td>vga</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>VGAポート数</td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td>dvi</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DVIポート数</td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td>hdmi</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>HDMIポート数</td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td>displayport</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイポート数</td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td>other</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>その他のポートなど</td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td>speaker</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>スピーカーの有無</td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td>usb</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>USBポート数</td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td>jyotai</td>
+<td>int(2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>稼働状態のID</td>
+</tr>
+<tr>
+<td class="text-right">14</td>
+<td>room_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>使用場所のID</td>
+</tr>
+<tr>
+<td class="text-right">15</td>
+<td>user_id</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>社員コード</td>
+</tr>
+<tr>
+<td class="text-right">16</td>
+<td>konyubi</td>
+<td>date</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>購入日</td>
+</tr>
+<tr>
+<td class="text-right">17</td>
+<td>kakaku</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>価格</td>
+</tr>
+<tr>
+<td class="text-right">18</td>
+<td>unyo_kikan</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>運用期間</td>
+</tr>
+<tr>
+<td class="text-right">19</td>
+<td>biko</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>備考</td>
+</tr>
+<tr>
+<td class="text-right">20</td>
+<td>serial_no</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>シリアルナンバー</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>display_model_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>ディスプレイのモデルID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ディスプレイのモデル名</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>maker_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メーカーのID</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td>model_url</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>販売情報URL</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>index_news</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>トップニュースのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>date</td>
+<td>date</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>日付</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>news</td>
+<td>tinytext</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ニュースの内容</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>jyotai_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>稼働状態のID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>状態</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>kaizoudo_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>ディスプレイの解像度ID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>kaizoudo</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>解像度</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>kaizoudo_shousai</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>解像度詳細</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>maker_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>メーカーのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メーカー名</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>model_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>PC本体のモデルのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>PC本体のモデル名</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>maker_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メーカーのID</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td>model_url</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>販売情報URL</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>office_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>OfficeのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Officeのバージョン</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>product_key</td>
+<td>varchar(50)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>プロダクトキー</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>os_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>OSのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>OS</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>pc_list</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>char(30)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>PCリストのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>maker_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メーカーのID</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>model_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>PC本体のモデルのID</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td>os_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>OSのID</td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td>processor_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>プロセッサのID</td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td>memori</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メモリ数</td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td>office_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>OfficeのID</td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td>jyotai</td>
+<td>int(2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>稼働状態のID</td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td>room_id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>使用場所のID</td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td>user_id</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>社員コード</td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td>konyubi</td>
+<td>date</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>購入日</td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td>kakaku</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>価格</td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td>unyo_kikan</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>運用期間</td>
+</tr>
+<tr>
+<td class="text-right">14</td>
+<td>biko</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>備考</td>
+</tr>
+<tr>
+<td class="text-right">15</td>
+<td>serial_no</td>
+<td>varchar(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>シリアルナンバー</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>pc_list_koshin</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>PCリスト更新情報ID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>kousinbi</td>
+<td>date</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>更新日</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>naiyou</td>
+<td>tinytext</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>PCリスト更新情報</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>processor_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>プロセッサのID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>ryaku</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>プロセッサの略</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>seishiki</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>プロセッサ正式名</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>room_tbl</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>id</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>使用場所のID</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>name</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>使用場所</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>short_name</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>使用場所の略</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>shain</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+<th>コメント</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td>shain_cd</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td>社員コード</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td>shain_mei</td>
+<td>varchar(30)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>社員名</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td>shain_mei_kana</td>
+<td>varchar(50)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>社員名（カナ）</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td>shaion_mei_romaji</td>
+<td>varchar(50)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>社員名（ローマ字）</td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td>shain_mail</td>
+<td>varchar(50)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>メールアドレス</td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td>gender</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>性別</td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td>shain_birthday</td>
+<td>date</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>誕生日</td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td>nyushabi</td>
+<td>date</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>入社日</td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td>tensekibi</td>
+<td>date</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>転籍日</td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td>taishokubi</td>
+<td>date</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>退職日</td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td>department</td>
+<td>int(2)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>部門ID</td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td>pic</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>写真</td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td>remarks</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>備考</td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer class="text-center">
+					your company
+				</footer>
+</body>
+</html>
+
